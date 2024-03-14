@@ -16,7 +16,11 @@ class SRTF{
     {
         int t=0,f=0,tbt=0;
         for(int i=0;i<n;i++)
-        tbt+=p[i].bt;
+        {
+            if(tbt<=p[i].at)
+            tbt=p[i].at;
+            tbt+=p[i].bt;
+        }
         string s;
         multimap<int,int> :: reverse_iterator it;
         multimap<int,int> :: iterator itr;
